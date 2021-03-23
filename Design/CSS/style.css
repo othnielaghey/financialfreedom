@@ -4,10 +4,10 @@
 h1, h2, h3, h4, h5, h6{
     font-family: 'Staatliches', cursive;
 }
-p, a, span, button, ::placeholder{
+p, a, span, button, ::placeholder, label, input{
     font-family: 'Lexend', sans-serif;
 }
-#register-btn{
+#register-btn, #login-btn{
     color: #F3B340;
     text-decoration: none;
 }
