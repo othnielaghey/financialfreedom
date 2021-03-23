@@ -4,8 +4,18 @@
 h1, h2, h3, h4, h5, h6{
     font-family: 'Staatliches', cursive;
 }
-p, a, span{
+p, a, span, button, ::placeholder{
     font-family: 'Lexend', sans-serif;
+}
+#register-btn{
+    color: #F3B340;
+    text-decoration: none;
+}
+#connexion-submit{
+    border: none;
+    padding: 10px;
+    background-color: #F3B340;
+    color: white;
 }
 /*CTA*/
 #CTA{
