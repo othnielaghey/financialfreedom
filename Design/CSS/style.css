@@ -16,6 +16,18 @@ p, a, span{
 .rs{
     color: grey;
 }
+.rs1:hover{
+    color: #4267B2; 
+}
+.rs2:hover{
+    color: #1DA1F2; 
+}
+.rs3:hover{
+    color: #E1306C; 
+}
+.rs4:hover{
+color: #225ac4; 
+}
 #webmaker{
     color: grey;
     text-decoration: none;
