@@ -28,9 +28,15 @@
 
                 <div class="row">
 
+                    <div class="col-md-2">
+
+                        <button onclick="goBack()" id="goback"><i class="fas fa-arrow-left"></i></button>
+
+                    </div>
+
                 </div>
 
-                <div class="row mb-5">
+                <div class="row mt-5 mb-5">
 
                     <form action="" method="post">
 
@@ -65,6 +71,12 @@
         </div>
 
     </div>
+
+    <script>
+        function goBack() {
+          window.history.back();
+        }
+    </script>
 
 </body>
 
