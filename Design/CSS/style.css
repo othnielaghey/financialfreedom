@@ -388,14 +388,17 @@ header.header-fixed {
         }
     }
   }
-  
+
+/*Carousel*/
+#carousel{
+    margin-top: 5%;
+}
 /*About*/
 #about {
     height: 100%;
     max-height: 900px;
     padding-top: 6%;
     padding-bottom: 6%;
-    margin-top: 5%;
 }
 
 /*PACK*/
