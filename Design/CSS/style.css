@@ -399,8 +399,9 @@ header.header-fixed {
 }
 
 /*PACK*/
-
-/*Ecris tout concernant le pack ici*/
+#regular-pack{
+    width: 100%;
+}
 
 /*CTA*/
 #CTA {
@@ -464,6 +465,16 @@ header.header-fixed {
     #about{
         margin-top: 20%;
     }
+
+
+
+
+
+
+
+
+
+    /*Register*/
     #registration-body{
         margin-top: 25%;
     }
