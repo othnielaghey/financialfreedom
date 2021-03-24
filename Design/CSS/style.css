@@ -5,12 +5,13 @@
 #340c48 violet
 */
 
-.mobilenone{
-    display: block!important;
-}
 .webnone{
-    display: none!important;
+    display: none;
 }
+.mobilenone{
+    display: block;
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -82,9 +83,12 @@ header #logo img {
         display: block;
     }
     .mobilenone{
-        display: none!important;
+        display: none;
     }
   /* Mobile Navigation */
+  header #logo img {
+    width: 50%;
+}
 
   .mobile-nav {
     position: fixed;
@@ -275,7 +279,7 @@ header #logo img {
 }
 
 .button_container span {
-    background: #f15a25;
+    background: #f3b340;
     border: none;
     height: 5px;
     width: 100%;
@@ -298,7 +302,7 @@ header #logo img {
 
 .overlay {
     position: fixed;
-    background: #f15a25;
+    background: #f3b340;
     top: 0;
     left: 0;
     width: 100%;
@@ -450,4 +454,13 @@ header #logo img {
         opacity: 0;
         right: 20%;
     }
+}
+
+#about{
+  margin-top: 10%;
+}
+@media (max-width: 767px){
+  #about {
+  margin-top: 30%;
+}
 }
