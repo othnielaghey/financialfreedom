@@ -17,10 +17,28 @@ p, a, span, button, ::placeholder, label, input{
     background-color: #F3B340;
     color: white;
 }
+/*About*/
+#about{
+    height: 100%;
+    max-height: 900px;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
 /*CTA*/
 #CTA{
     background-color: #F3B340;
     height: 200px;
+}
+#CTA h4{
+    line-height: 750%;
+}
+#CTA a {
+    line-height: 1100%;
+    color: #F3B340;
+    background-color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 5px;
 }
 /*footer*/
 .rs{
