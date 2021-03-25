@@ -388,12 +388,18 @@ header #logo img {
 #about {
     height: 100%;
     max-height: 1000px;
-    padding-top: 15%;
-    padding-bottom: 15%;
+    padding-top: 12%;
+    padding-bottom: 12%;
     margin-top: 5%;
 }
 
 /*PACK*/
+#packs{
+
+    padding-top: 13%;
+    padding-bottom: 13%;
+
+}
 #regular-pack, #top-pack, #low-pack, #medium-pack, #high-pack{
     width: 100%;
 }
