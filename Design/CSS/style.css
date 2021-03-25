@@ -32,7 +32,7 @@ button,
 ::placeholder,
 label,
 input,
-.th-sm, td {
+.th-sm, td, option, select {
     font-family: 'Lexend', sans-serif;
 }
 
