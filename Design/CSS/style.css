@@ -401,7 +401,7 @@ header #logo img {
 #packs{
 
     padding-top: 13%;
-    padding-bottom: 13%;
+    padding-bottom: 0%;
 
 }
 #regular-pack, #top-pack, #low-pack, #medium-pack, #high-pack{
