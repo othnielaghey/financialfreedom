@@ -387,24 +387,19 @@ header #logo img {
     }
   }
 
-/*Carousel*/
-.carousel-control-prev, .carousel-control-next{
-}
+
 /*About*/
 #about {
     height: 100%;
     max-height: 1000px;
-    padding-top: 12%;
+    padding-top: 5%;
     padding-bottom: 12%;
-    margin-top: 5%;
 }
 
 /*PACK*/
 #packs{
-
-    padding-top: 13%;
+    padding-top: 5%;
     padding-bottom: 0%;
-
 }
 #regular-pack, #top-pack, #low-pack, #medium-pack, #high-pack{
     width: 100%;
@@ -486,16 +481,6 @@ header #logo img {
     #carousel{
         margin-top: 25%;
     }
-    #about{
-        margin-top: 20%;
-    }
-
-
-
-
-
-
-
 
 
     /*Register*/
