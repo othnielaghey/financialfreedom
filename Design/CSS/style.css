@@ -45,7 +45,10 @@ input,
     background-color: #F3B340;
     color: white;
 }
-
+#rigght-btn{
+    color: #FFF;
+    background-color: #f3b340;
+}
 /*Header*/
 
 header {
