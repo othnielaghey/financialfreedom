@@ -53,7 +53,7 @@
 
                     <div class="col-md-2 text-end">
 
-                        <a href="logout.php">Se deconnecter</a>
+                        <a href="logout.php" id="rigght-btn">Se deconnecter</a>
 
                     </div>
         
@@ -108,7 +108,7 @@
                                 <td><?= $collection['numero'];?></td>
                                 <td><?= $collection['profession'];?></td>
                                 <td>
-                                    <a href="view_info.php?id=<?= $collection['id'];?>" class="">En savoir plus</a>
+                                    <a href="view_info.php?id=<?= $collection['id'];?>" id="rigght-btn">En savoir plus</a>
                                 </td>
 
                                 </tr>
