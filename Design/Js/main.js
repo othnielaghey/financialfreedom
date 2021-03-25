@@ -5,8 +5,10 @@ window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("header").style.top = "0";
+    document.getElementById("toggle").style.top = "25px";
   } else {
     document.getElementById("header").style.top = "-20%";
+    document.getElementById("toggle").style.top = "-20%";
   }
   prevScrollpos = currentScrollPos;
 }
