@@ -13,6 +13,9 @@
 .mobilenone{
     display: block;
 }
+body{
+    margin: 0;
+}
 h1,
 h2,
 h3,
@@ -49,31 +52,17 @@ input,
 /*Header*/
 
 header {
-    padding: 20px 0;
+    padding: 10px 0px 0px 0px;
     position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
     transition: all 0.5s;
-    z-index: 997;
-    background: white;
-}
-
-header #logo {
-    float: left;
+    z-index: 1;
+    background: #fff;
 }
 
 header #logo img {
     padding: 0;
     margin: 0;
-    width: 85%;
-}
-
-header.header-fixed {
-    background: rgba(52, 59, 64, 0.9);
-    padding: 20px 0;
-    height: 72px;
-    transition: all 0.5s;
+    width: 80%;
 }
 
 /* Desktop Navigation */
@@ -89,19 +78,21 @@ header.header-fixed {
 .main-nav>ul>li {
   position: relative;
   white-space: nowrap;
-  float: left;
+  display: inline-block;
+  text-align: right!important;
 }
 
 .main-nav a {
   display: block;
   position: relative;
   color: #2a312b;
-  padding: 10px 15px;
+  padding: 20px 25px 0px 0px;
   transition: 0.3s;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Lexend", sans-serif;
   font-weight: 600;
   text-decoration: none;
+  text-align: center;
 }
 
 .main-nav a:hover,
@@ -124,7 +115,7 @@ header.header-fixed {
         display: block!important;
     }
     header #logo img { 
-        width: 50%;
+        width: 80%;
       }
     header{
         padding: 10px 0px;
@@ -180,7 +171,7 @@ header.header-fixed {
     .button_container {
         position: fixed;
         top: 25px;
-        right: 10%;
+        right: 8%;
         height: 27px;
         width: 30px;
         cursor: pointer;
@@ -246,7 +237,7 @@ header.header-fixed {
         transition: opacity .35s, visibility .35s, height .35s;
         overflow: hidden;
     }
-    
+
     .overlay.open {
         opacity: 1;
         visibility: visible;
@@ -477,6 +468,9 @@ header.header-fixed {
 /*RESPONSIVE*/
 
 @media (max-width: 767px) {
+    #carousel{
+        margin-top: 25%;
+    }
     #about{
         margin-top: 20%;
     }
