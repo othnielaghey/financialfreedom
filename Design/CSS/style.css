@@ -478,8 +478,12 @@ header #logo img {
 /*RESPONSIVE*/
 
 @media (max-width: 767px) {
+    /*Index*/
     #carousel{
         margin-top: 25%;
+    }
+    .carousel-indicators{
+        display: none;
     }
 
     #CTA h5{
@@ -489,9 +493,13 @@ header #logo img {
     #CTA{
         padding-bottom: 15%;
     }
-
+    #webmaker {
+        font-size: 12px;
+    }
     /*Register*/
     #registration-body{
         margin-top: 25%;
     }
+
+
   }

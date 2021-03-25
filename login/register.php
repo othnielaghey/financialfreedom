@@ -46,8 +46,8 @@
 
             <div class="col-md-8">
 
-                <h1>Inscrivez-vous, pour XXXXXXXX</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, ea eos. Soluta sit praesentium ipsum! At magni minima voluptatem nemo repellat. Porro repudiandae dolore velit et quas similique eos nisi?</p>
+                <h1>Inscrivez-vous, pour faire partie de l'aventure !</h1>
+                <p>Veuillez remplir le formulaire ci-dessous. Nous nous engageons à protéger vos données personnelles.</p>
 
             </div>
 
