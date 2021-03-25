@@ -1,11 +1,23 @@
-//document ready
+/* Header
+Cacher le header pendant le scroll down et le faire apparaitre pendant le scroll up */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("header").style.top = "0";
+  } else {
+    document.getElementById("header").style.top = "-20%";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+/*Burger menu*/
 $(function () {
 
-    //if mobile burger menu clicked
     $('#toggle').click(function () {
         $(this).toggleClass('active');
         $('#overlay').toggleClass('open');
+        document.getElementsByClassName('carousel-control-prev').style.display = "none";
     });
-
 
 });
