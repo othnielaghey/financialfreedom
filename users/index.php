@@ -64,7 +64,7 @@
         
                     </div>
         
-                    <div class="col-md-5"></div>
+                    <div class="col-md-4"></div>
 
                     <div class="col-md-4 text-end">
 
@@ -72,9 +72,9 @@
 
                     </div>
 
-                    <div class="col-md-1">
+                    <div class="col-md-2">
 
-                        <a href="logout.php">Se deconnecter</a>
+                        <a href="logout.php" id="rigght-btn">Se deconnecter</a>
 
                     </div>
         
