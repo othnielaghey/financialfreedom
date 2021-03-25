@@ -129,7 +129,51 @@
 
                         <label for="">Quel est votre capital d'investissement ?</label>
                         <select name="capital" id="capital" class="form-select">
+                            <optgroup id="regular-invest" label="Regular Pack">
+                                <option value="1000r">450.000 f cfa / $1000</option>
+                                <option value="1444">650.000 f cfa / $1444</option>
+                                <option value="1888">850.000 f cfa / $1888</option>
+                                <option value="2666">1.200.000 f cfa / $2666</option>
+                                <option value="6666">3.000.000 f cfa / $6666</option>
+                                <option value="7777">3.500.000 f cfa / $7777</option>
+                                <option value="10000">4.500.000 f cfa / $10.000</option>
+                                <option value="18888">8.500.000 f cfa / $18.888</option>
+                                <option value="33333">15.000.000 f cfa / $33.333</option>                                          
+                            </optgroup>
 
+                            <optgroup id="low-invest" label="Low Pack">
+                                <option value="122">55.000 f cfa / $122</option>
+                                <option value="337">170.000 f cfa / $337</option>
+                            </optgroup>
+
+                            <optgroup id="medium-invest" label="Medium Pack">
+                                <option value="1000m">450.000 f cfa / $1000</option>
+                                <option value="1233">555.000 f cfa / $1233</option>
+                                <option value="2333">1.050.000 f cfa / $2333</option>
+                                <option value="3455">1.555.000 f cfa / $3455</option>
+                            </optgroup>
+
+                            <optgroup id="high-invest" label="High Pack">
+                                <option value="7777m">3.500.000 f cfa / $7777</option>
+                                <option value="14444">6.500.000 f cfa / $14.444</option>
+                                <option value="25555">11.500.000 f cfa / $25.555</option>
+                            </optgroup>
+
+                            <optgroup id="top-invest" label="Top Pack">
+                                <option value="444">200.000 f cfa / $444</option>
+                                <option value="777">350.000 f cfa / $777</option>
+                                <option value="1466">660.000 f cfa / $1466</option>
+                                <option value="2122">955.000 f cfa / $2122</option>
+                                <option value="2888">1.300.000 f cfa / $2888</option>
+                                <option value="3555">1.600.000 f cfa / $3555</option>
+                                <option value="7777t">3.500.000 f cfa / $7777</option>
+                                <option value="10666">4.800.000 f cfa / $10.666</option>
+                                <option value="14444">6.500.000 f cfa / $14.444</option>
+                                <option value="27777">12.500.000 f cfa / $27.777</option>
+                                <option value="47777">21.500.000 f cfa / $47.777</option>
+                                <option value="78888">35.500.000 f cfa / $78.888</option>
+                                <option value="166666">75.000.000 f cfa / $166.666</option>
+                            </optgroup>
                         </select>
 
                     </div>
