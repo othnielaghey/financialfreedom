@@ -115,9 +115,12 @@
                     <div class="col-md-4">
 
                         <label for="">Votre choix du programme d'investissement</label>
-                        <select name="programme" id="" class="form-select">
-                            <option value=""></option>
-
+                        <select name="programme" id="programme" class="form-select">
+                            <option value="Regular pack">Regular pack</option>
+                            <option value="Low pack">Low pack</option>
+                            <option value="Medium pack">Medium pack</option>
+                            <option value="High pack">High pack</option>
+                            <option value="Top pack">Top pack</option>
                         </select>
 
                     </div>
@@ -125,8 +128,8 @@
                     <div class="col-md-4">
 
                         <label for="">Quel est votre capital d'investissement ?</label>
-                        <select name="capital" id="" class="form-select">
-                            <option value=""></option>
+                        <select name="capital" id="capital" class="form-select">
+
                         </select>
 
                     </div>
@@ -134,8 +137,8 @@
                     <div class="col-md-4">
 
                         <label for="">Quel durée d'investissement, choisissez-vous ?</label>
-                        <select name="duree" id="" class="form-select">
-                            <option value=""></option>
+                        <select name="duree" id="duree" class="form-select">
+
                         </select>
 
                     </div>
@@ -205,6 +208,16 @@
         function goBack() {
           window.history.back();
         }
+    </script>
+    <script>
+            if (document.getElementById('programme').options[0].selectedIndex == "Regular pack") {
+alert('running');
+    document.getElementById('capital').innerHTML +=  `
+    <option value="1000">450.000 f cfa / 1000$</option>
+    <option value="1000">450.000 f cfa / 1000$</option>
+    <option value="1000">450.000 f cfa / 1000$</option>
+    `
+}
     </script>
 
     <script src="../Design/JS/main.js"></script>
