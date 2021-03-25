@@ -51,6 +51,7 @@ input,
 #rigght-btn{
     color: #FFF;
     background-color: #f3b340;
+    padding: 15px;
 }
 /*Header*/
 
@@ -383,7 +384,10 @@ header #logo img {
         }
     }
   }
-  
+
+/*Carousel*/
+.carousel-control-prev, .carousel-control-next{
+}
 /*About*/
 #about {
     height: 100%;
