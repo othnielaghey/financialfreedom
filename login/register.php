@@ -62,21 +62,21 @@
                     <div class="col-md-6">
 
                         <label for="">Votre nom et prénom</label>
-                        <input type="text" name="" id="" class="form-control">
+                        <input type="text" name="name" id="" class="form-control">
 
                     </div>
 
                     <div class="col-md-6">
 
                         <label for="">Votre email</label>
-                        <input type="email" name="" id="" class="form-control">
+                        <input type="email" name="email" id="" class="form-control">
 
                     </div>
 
                     <div class="col-md-6">
 
                         <label for="">Votre sexe</label>
-                        <select name="" id="" class="form-select">
+                        <select name="sexe" id="" class="form-select">
                             <option value=""></option>
                             <option value="Homme">Homme</option>
                             <option value="Femme">Femme</option>
@@ -87,35 +87,35 @@
                     <div class="col-md-6">
 
                         <label for="">Votre profession</label>
-                        <input type="text" name="" id="" class="form-control">
+                        <input type="text" name="profession" id="" class="form-control">
 
                     </div>
 
                     <div class="col-md-4">
 
                         <label for="">Votre numéro de téléphone</label>
-                        <input type="tel" name="" id="" class="form-control">
+                        <input type="tel" name="numero" id="" class="form-control">
 
                     </div>
 
                     <div class="col-md-4">
 
                         <label for="">Votre numéro whatsapp</label>
-                        <input type="tel" name="" id="" class="form-control">
+                        <input type="tel" name="whatsapp" id="" class="form-control">
 
                     </div>
 
                     <div class="col-md-4">
 
                         <label for="">Votre pays de résidence</label>
-                        <input type="text" name="" id="" class="form-control">
+                        <input type="text" name="pays" id="" class="form-control">
 
                     </div>
 
                     <div class="col-md-4">
 
                         <label for="">Votre choix du programme d'investissement</label>
-                        <select name="" id="" class="form-select">
+                        <select name="programme" id="" class="form-select">
                             <option value=""></option>
 
                         </select>
@@ -125,7 +125,7 @@
                     <div class="col-md-4">
 
                         <label for="">Quel est votre capital d'investissement ?</label>
-                        <select name="" id="" class="form-select">
+                        <select name="capital" id="" class="form-select">
                             <option value=""></option>
                         </select>
 
@@ -134,7 +134,7 @@
                     <div class="col-md-4">
 
                         <label for="">Quel durée d'investissement, choisissez-vous ?</label>
-                        <select name="" id="" class="form-select">
+                        <select name="duree" id="" class="form-select">
                             <option value=""></option>
                         </select>
 
@@ -143,14 +143,14 @@
                     <div class="col-md-6">
 
                         <label for="">Un créneau libre pour discuter au téléphone ?</label>
-                        <input type="time" name="" id="" class="form-control">
+                        <input type="time" name="heure" id="" class="form-control">
 
                     </div>
                     
                     <div class="col-md-6">
 
                         <label for="">Quand pouvez-vous débuter votre investissement ?</label>
-                        <input type="date" name="" id="" class="form-control">
+                        <input type="date" name="date_debut" id="" class="form-control">
 
                     </div>
                     
@@ -166,14 +166,15 @@
                     <div class="col-md-6">
 
                         <label for="">Creer votre mot de passe</label>
-                        <input type="password" name="" id="" class="form-control">
+                        <input type="password" name="password" id="" class="form-control">
+                        <span class="invalid-feedback"><?php echo $password_err; ?></span>
 
                     </div>
 
                     <div class="col-md-6">
 
                         <label for="">Confirmer votre mot de passe</label>
-                        <input type="password" name="" id="" class="form-control">
+                        <input type="password" name="confirm_password" id="" class="form-control">
 
                     </div>
 
@@ -207,6 +208,81 @@
     </script>
 
     <script src="../Design/JS/main.js"></script>
+
+    <?php require_once '../config/index.php';
+
+    $password_err = '';
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+        $name = trim($_POST['name']);
+        $email = trim($_POST['email']);
+        $sexe = trim($_POST['sexe']);
+        $profession = trim($_POST['profession']);
+        $phone = trim($_POST['numero']);
+        $whatsapp = trim($_POST['whatsapp']);
+        $pays = trim($_POST['pays']);
+        $programme = trim($_POST['programme']);
+        $capital = trim($_POST['capital']);
+        $duree = trim($_POST['duree']);
+        $heure = trim($_POST['heure']);
+        $date_debut = trim($_POST['date_debut']);
+        $password =  trim($_POST['password']);
+        $confirm_password = trim($_POST['confirm_password']);
+
+        if(empty($password)){
+            $password_err = 'Please enter password';
+        }elseif(strlen($password) < 8){
+            $password_err = 'Password must be at least 8 characters ';
+        }
+
+        if(empty($confirm_password)){
+            $password_err = 'Please confirm password';
+        }else {
+            if($password !== $confirm_password){
+              $password_err = 'Passwords do not match';
+            }
+        }
+
+        if(empty($email) || empty($password)){
+            die('X');
+        }
+        else{
+            $password = password_hash($password, PASSWORD_DEFAULT);
+
+            $sql = 'INSERT INTO users (nom,email,sexe,profession,numero,whatsapp,pays,programme,capital,duree,heure,date_debut,password) VALUES (:nom,:email,:sexe,:profession,:numero,:whatsapp,:pays,:programme,:capital,:duree,:heure,:date_debut,:password)';
+
+            if($stmt = $pdo->prepare($sql)){
+                $stmt->bindParam(':nom', $name, PDO::PARAM_STR);
+                $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+                $stmt->bindParam(':sexe', $sexe, PDO::PARAM_STR);
+                $stmt->bindParam(':profession', $profession, PDO::PARAM_STR);
+                $stmt->bindParam(':numero', $phone, PDO::PARAM_STR);
+                $stmt->bindParam(':whatsapp', $whatsapp, PDO::PARAM_STR);
+                $stmt->bindParam('pays', $pays, PDO::PARAM_STR);
+                $stmt->bindParam(':programme', $programme, PDO::PARAM_STR);
+                $stmt->bindParam(':capital', $capital, PDO::PARAM_STR);
+                $stmt->bindParam(':duree', $duree, PDO::PARAM_STR);
+                $stmt->bindParam(':heure', $heure, PDO::PARAM_STR);
+                $stmt->bindParam(':date_debut', $date_debut, PDO::PARAM_STR);
+                $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+
+                if($stmt->execute()){
+                    header('location: ../login/index.php');
+                }else{
+                    die('Wrong');
+                }
+
+            }
+            unset($stmt);
+        }
+
+        unset($pdo);
+
+    }
+
+    ?>
 
 </body>
 

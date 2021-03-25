@@ -16,34 +16,17 @@
     <link rel="shortcut icon" href="../Design/IMG/logo.png" type="image/x-icon">
 
 </head>
-
 <body>
-
+    
     <div class="container-fluid">
 
         <div class="row">
 
-            <div class="col-md-4">
+            <div class="col-md-1">
 
             </div>
 
-            <div class="col-md-6 p-5">
-
-                <div class="row">
-
-                    <div class="col-md-2">
-
-                        <button onclick="goBack()" id="goback"><i class="fas fa-arrow-left"></i></button>
-
-                    </div>
-
-                    <div class="col-md-10 text-right">
-
-                        <a href=""></a>
-
-                    </div>
-
-                </div>
+            <div class="col-md-9 p-5">
 
                 <div class="row mt-5 mb-5">
 
@@ -55,23 +38,17 @@
 
                         <br><br>
 
-                        <input type="email" name="" id="" class="form-control" placeholder="Votre adresse email">
+                        <input type="text" name="username" id="" class="form-control" placeholder="Votre adresse email">
 
                         <br>
 
-                        <input type="password" name="" id="" class="form-control" placeholder="Votre mot de passe">
+                        <input type="password" name="password" id="" class="form-control" placeholder="Votre mot de passe">
 
                         <br>
 
-                        <button type="submit" id="connexion-submit">Se connecter</button>
+                        <button type="submit" id="connexion-submit" name="user_submit">Se connecter</button>
 
                     </form>
-
-                </div>
-
-                <div class="row">
-
-                    <p>Vous n'avez pas de compte ? <a href="register.html" id="register-btn">Inscrivez vous</a></p>
 
                 </div>
 
@@ -81,12 +58,44 @@
 
     </div>
 
-    <script>
-        function goBack() {
-          window.history.back();
+    <?php require_once '../config/index.php'; 
+
+if(isset($_POST['user_submit'])){
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if($username != "" && $password != ""){
+
+        $query = "select * from `admin` where `username`=:username and `password`=:password";
+
+        $stmt = $pdo->prepare($query);
+        $stmt->bindParam('username', $username, PDO::PARAM_STR);
+        $stmt->bindValue('password', $password, PDO::PARAM_STR);
+        $stmt->execute();
+        $count = $stmt->rowCount();
+        $row   = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if($count == 1 && !empty($row)){
+
+            $_SESSION['sess_user_id']   = $row['id'];
+            $_SESSION['sess_user_name'] = $row['username'];
+            $_SESSION['sess_name'] = $row['name'];
+
+            header('location:dashboard.php');
+
         }
-    </script>
+        else{
+            $msg = "Invalid username and password!";
+        }
+    }
+    else {
+        $msg = "Both fields are required!";
+    }
+
+}
+
+    ?>
 
 </body>
-
 </html>
