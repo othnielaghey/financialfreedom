@@ -117,11 +117,7 @@
                         <label for="">Votre choix du programme d'investissement</label>
                         <select name="programme" id="" class="form-select">
                             <option value=""></option>
-                            <option value="Regular pack">Regular pack</option>
-                            <option value="Low pack">Low pack</option>
-                            <option value="Medium pack">Medium pack</option>
-                            <option value="High pack">High pack</option>
-                            <option value="Top pack">Top pack</option>
+
                         </select>
 
                     </div>
