@@ -19,7 +19,13 @@ $(function () {
     $('#toggle').click(function () {
         $(this).toggleClass('active');
         $('#overlay').toggleClass('open');
-        document.getElementsByClassName('carousel-control-prev').style.display = "none";
     });
 
 });
+/*
+$(function (){
+      $(".mobile-nav-link").click(function () {
+      $('overlay').toggleClass('open');
+    })
+});*/
+
