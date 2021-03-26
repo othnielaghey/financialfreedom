@@ -22,10 +22,12 @@ $(function () {
     });
 
 });
-/*
-$(function (){
-      $(".mobile-nav-link").click(function () {
-      $('overlay').toggleClass('open');
+
+/*Onclick sur le lien # du menu mobile, suivre le lien et recharger la page*/
+  $(function (){
+    $(".mobile-nav-link").click(function () {
+      document.getElementById('overlay').style.visibility = "hidden";
+      window.location.reload();
     })
-});*/
+});
 
