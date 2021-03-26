@@ -459,6 +459,9 @@ header #logo img {
     padding: 20px;
     border-radius: 5px;
 }
+#payement-method img{
+    width: 100%;
+}
 
 /*footer*/
 .rs {
