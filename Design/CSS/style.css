@@ -490,6 +490,10 @@ header #logo img {
     color: grey;
     text-decoration: none;
 }
+#copyright,
+#webmaker {
+        font-size: 14px;
+}
 
 /*Login*/
 
@@ -544,7 +548,7 @@ header #logo img {
 
     #copyright,
     #webmaker {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     /*Register*/
