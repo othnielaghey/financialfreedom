@@ -113,11 +113,7 @@
                 <div class="col-md-6 mt-5 g-3">
 
                     <div class="mt-5 text-center" id="mycart">
-
-                        <p>Votre retout sur investissement est de</p>
-
-                        <h1></h1>
-
+                        <img src="../Design/IMG/graph.jpg" alt="">
                     </div>
 
                 </div>
