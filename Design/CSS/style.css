@@ -138,6 +138,7 @@ header #logo img {
     header {
         padding: 10px 0px;
     }
+
     #rigght-btn {
         color: #f3b340;
         background-color: #fff;
@@ -459,7 +460,8 @@ header #logo img {
     padding: 20px;
     border-radius: 5px;
 }
-#payement-method img{
+
+#payement-method img {
     width: 100%;
 }
 
@@ -520,7 +522,7 @@ header #logo img {
     }
 
     .carousel-indicators {
-        display: none!important;
+        display: none !important;
     }
 
     #about #logo0 {
@@ -540,6 +542,7 @@ header #logo img {
         padding: 10px;
     }
 
+    #copyright,
     #webmaker {
         font-size: 12px;
     }
@@ -548,6 +551,4 @@ header #logo img {
     #registration-body {
         margin-top: 25%;
     }
-
-
 }
